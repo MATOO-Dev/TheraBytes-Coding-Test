@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//Q:
+//1. Which value has result?
+//bool result = (myBool) ? !myBool : myBool;
 
-namespace SimpleQuestions
-{
-    internal class Question1
-    {
-    }
-}
+//A:
+//this is basically just another way to write the following:
+
+//bool result;
+//if(myBool)
+//      result = !myBool;
+//else
+//      result = myBool;
+
+//therefore, the value of result will always be the opposite of myBool

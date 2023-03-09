@@ -1,0 +1,15 @@
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\bin\Debug\net6.0\SimpleQuestions.exe
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\bin\Debug\net6.0\SimpleQuestions.deps.json
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\bin\Debug\net6.0\SimpleQuestions.runtimeconfig.json
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\bin\Debug\net6.0\SimpleQuestions.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\bin\Debug\net6.0\SimpleQuestions.pdb
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\SimpleQuestions.csproj.AssemblyReference.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\SimpleQuestions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\SimpleQuestions.AssemblyInfoInputs.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\SimpleQuestions.AssemblyInfo.cs
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\SimpleQuestions.csproj.CoreCompileInputs.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\SimpleQuestions.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\refint\SimpleQuestions.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\SimpleQuestions.pdb
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\SimpleQuestions.genruntimeconfig.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SimpleQuestions\obj\Debug\net6.0\ref\SimpleQuestions.dll

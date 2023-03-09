@@ -56,10 +56,9 @@ namespace SkillTree
                 if(NodeDependencies != null)
                     foreach(SkillNode current in NodeDependencies)
                     {
-                        Console.Write(current.Name);
+                        Console.Write(current.Name + ", ");
                     }
-                Console.Write("\n");
-                Console.Write("Available for unlock: " + CanBeUnlocked().ToString() + "\n");
+                Console.Write("\n" + "Available for unlock: " + CanBeUnlocked().ToString() + "\n" + "\n");
             }
         }
     }

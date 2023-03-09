@@ -1,0 +1,15 @@
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\bin\Debug\net6.0\SkillTree.exe
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\bin\Debug\net6.0\SkillTree.deps.json
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\bin\Debug\net6.0\SkillTree.runtimeconfig.json
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\bin\Debug\net6.0\SkillTree.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\bin\Debug\net6.0\SkillTree.pdb
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\SkillTree.csproj.AssemblyReference.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\SkillTree.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\SkillTree.AssemblyInfoInputs.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\SkillTree.AssemblyInfo.cs
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\SkillTree.csproj.CoreCompileInputs.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\SkillTree.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\refint\SkillTree.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\SkillTree.pdb
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\SkillTree.genruntimeconfig.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\SkillTree\obj\Debug\net6.0\ref\SkillTree.dll

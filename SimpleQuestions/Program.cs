@@ -1,2 +1,2 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//the answers to the individual questions are written as comments within the respective files
+//as these are seperate questions, sometimes without executable code
