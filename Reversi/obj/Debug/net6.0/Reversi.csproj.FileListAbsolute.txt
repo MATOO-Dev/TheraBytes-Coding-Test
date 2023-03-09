@@ -1,0 +1,15 @@
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\bin\Debug\net6.0\Reversi.exe
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\bin\Debug\net6.0\Reversi.deps.json
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\bin\Debug\net6.0\Reversi.runtimeconfig.json
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\bin\Debug\net6.0\Reversi.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\bin\Debug\net6.0\Reversi.pdb
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\Reversi.csproj.AssemblyReference.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\Reversi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\Reversi.AssemblyInfoInputs.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\Reversi.AssemblyInfo.cs
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\Reversi.csproj.CoreCompileInputs.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\Reversi.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\refint\Reversi.dll
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\Reversi.pdb
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\Reversi.genruntimeconfig.cache
+C:\Users\MATOO\Projects\TheraBytes-Coding-Test\Reversi\obj\Debug\net6.0\ref\Reversi.dll

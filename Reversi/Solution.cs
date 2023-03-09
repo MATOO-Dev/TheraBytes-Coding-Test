@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Reversi
 {
-    internal class Solution
+    public class Solution
     {
+
+        public static string PlaceToken(string board)
+        {
+            return null;
+        }
     }
 }
