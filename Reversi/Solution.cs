@@ -59,19 +59,13 @@ namespace Reversi
             {
                 for (int xPos = 0; xPos < playingField.mBoard.GetLength(0); xPos++)
                 {
-
-                    //Console.WriteLine("checking field " + xPos + "," + yPos);
-
                     //if the field is not empty, skip to the next field
                     if (playingField.mBoard[xPos, yPos] != EFieldState.empty)
                         continue;
 
-                    //Console.WriteLine("field " + xPos + "," + yPos + " is empty, continuing with move score calculation");
-
                     //calculate the points achieved by playing a token here
+                    //note: this does not currently support chain reactions from capturing pieces
                     int moveScore = CalculateMoveScore(new BoardPosition(xPos, yPos), playingField).moveScore;
-
-                    //Console.WriteLine("score for move calculated as " + moveScore);
 
                     //if this is the first recorded play, add it to the list and skip to the next field
                     if (highestScorePlays.Count == 0)
@@ -111,6 +105,7 @@ namespace Reversi
 
         public static BoardPosition CalculateMoveScore(BoardPosition startPos, Board referenceBoard)
         {
+            //note: this does not currently support chain reactions from capturing pieces
             //attempts possible moves, and returns it with the score that move will bring the player
             int totalScore = 0;
             BoardPosition reachedTarget = new BoardPosition(startPos.posX, startPos.posY, 0);
@@ -166,7 +161,6 @@ namespace Reversi
                         int differenceX = Math.Abs(targetField.posX - startPos.posX) - 1;
                         int differenceY = Math.Abs(targetField.posY - startPos.posY) - 1;
                         //then return the larger one for x / y. this makes it work for any of the 8 directions
-                        //Console.WriteLine("target is player, score is " + Math.Max(differenceX, differenceY));
                         int score = Math.Max(differenceX, differenceY);
                         return new BoardPosition(targetField.posX, targetField.posY, score);
 

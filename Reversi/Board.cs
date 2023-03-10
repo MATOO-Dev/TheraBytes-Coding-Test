@@ -22,7 +22,7 @@ namespace Reversi
 
         public Board()
         {
-            mBoard = new EFieldState[0,0];
+            mBoard = new EFieldState[0, 0];
         }
 
         public string ConvertBoardToText()
@@ -54,17 +54,15 @@ namespace Reversi
 
         public void ReadBoardFromText(string boardText)
         {
-            //clean all new line characters (\n) from string
-            //Console.WriteLine(boardText + "\n");
-            //string test = boardText.Replace("\n", "");
-            //Console.WriteLine(test);
-
+            //clean input string
+            //replace new lines with " "
+            boardText = boardText.Replace(Environment.NewLine, " ");
             //define board size
             int widthX = int.Parse(boardText.Substring(0, 1));
             int widthY = int.Parse(boardText.Substring(2, 1));
             RegenerateBoard(widthX, widthY);
-            //cut off first three characters from string to begin parsing
-            boardText = boardText.Remove(0, 3);
+            //cut off first four characters from string to begin parsing
+            boardText = boardText.Remove(0, 4);
 
             //iterate through each row
             for (int yPos = 0; yPos < mBoard.GetLength(1); yPos++)
@@ -85,9 +83,6 @@ namespace Reversi
                             break;
                         case "O":
                             EditBoardToken(xPos, yPos, EFieldState.player2);
-                            break;
-                        case "\n":
-                            Console.WriteLine("new line");
                             break;
                     }
                     //remove first 2 characters from string to make next field be in front
