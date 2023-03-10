@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Reversi
 {
@@ -21,6 +18,11 @@ namespace Reversi
         public Board(int boardSizeX, int boardSizeY)
         {
             mBoard = new EFieldState[boardSizeX, boardSizeY];
+        }
+
+        public Board()
+        {
+            mBoard = new EFieldState[0,0];
         }
 
         public string ConvertBoardToText()
@@ -52,6 +54,18 @@ namespace Reversi
 
         public void ReadBoardFromText(string boardText)
         {
+            //clean all new line characters (\n) from string
+            //Console.WriteLine(boardText + "\n");
+            //string test = boardText.Replace("\n", "");
+            //Console.WriteLine(test);
+
+            //define board size
+            int widthX = int.Parse(boardText.Substring(0, 1));
+            int widthY = int.Parse(boardText.Substring(2, 1));
+            RegenerateBoard(widthX, widthY);
+            //cut off first three characters from string to begin parsing
+            boardText = boardText.Remove(0, 3);
+
             //iterate through each row
             for (int yPos = 0; yPos < mBoard.GetLength(1); yPos++)
             {
@@ -95,6 +109,17 @@ namespace Reversi
             {
                 Console.WriteLine(boardString.Substring(row * mBoard.GetLength(0) * 2, mBoard.GetLength(0) * 2));
             }
+        }
+
+        public void RegenerateBoard(int newSizeX, int newSizeY)
+        {
+            mBoard = new EFieldState[newSizeX, newSizeY];
+        }
+
+        public static string GetStringFromBoardPosition(BoardPosition position)
+        {
+            const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVQXYZ";
+            return alphabet[position.posX] + (position.posY + 1).ToString();
         }
     }
 }
