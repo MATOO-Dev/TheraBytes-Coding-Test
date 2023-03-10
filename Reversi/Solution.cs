@@ -69,7 +69,7 @@ namespace Reversi
                     //Console.WriteLine("field " + xPos + "," + yPos + " is empty, continuing with move score calculation");
 
                     //calculate the points achieved by playing a token here
-                    int moveScore = CalculateMoveScore(new BoardPosition(xPos, yPos), playingField);
+                    int moveScore = CalculateMoveScore(new BoardPosition(xPos, yPos), playingField).moveScore;
 
                     //Console.WriteLine("score for move calculated as " + moveScore);
 
@@ -109,9 +109,12 @@ namespace Reversi
             return string.Join(", ", boardPositionStrings);
         }
 
-        public static int CalculateMoveScore(BoardPosition startPos, Board referenceBoard)
+        public static BoardPosition CalculateMoveScore(BoardPosition startPos, Board referenceBoard)
         {
-            int score = 0;
+            //attempts possible moves, and returns it with the score that move will bring the player
+            int totalScore = 0;
+            BoardPosition reachedTarget = new BoardPosition(startPos.posX, startPos.posY, 0);
+            BoardPosition highestScoreTarget = new BoardPosition(startPos.posX, startPos.posY, 0);
             //for x = -1 | 0 | +1
             for (int x = -1; x < 2; x++)
             {
@@ -119,13 +122,20 @@ namespace Reversi
                 for (int y = -1; y < 2; y++)
                 {
                     if (!(x == 0 && y == 0))
-                        score += CalculateScoreInDirection(startPos, new BoardPosition(x, y), referenceBoard);
+                    {
+                        reachedTarget = CalculateScoreInDirection(startPos, new BoardPosition(x, y), referenceBoard);
+                        if (reachedTarget.moveScore > highestScoreTarget.moveScore)
+                            highestScoreTarget = new BoardPosition(reachedTarget);
+                        totalScore += reachedTarget.moveScore;
+                    }
                 }
             }
-            return score;
+            //update score for chain reactions
+            //totalScore += CalculateChainReactionScore(referenceBoard, startPos);
+            return new BoardPosition(highestScoreTarget.posX, highestScoreTarget.posY, totalScore);
         }
 
-        public static int CalculateScoreInDirection(BoardPosition startPos, BoardPosition direction, Board referenceBoard)
+        public static BoardPosition CalculateScoreInDirection(BoardPosition startPos, BoardPosition direction, Board referenceBoard)
         {
             BoardPosition currentField = new BoardPosition(startPos);
             BoardPosition targetField;
@@ -139,7 +149,7 @@ namespace Reversi
                 bool inBoundsX = targetField.posX < referenceBoard.mBoard.GetLength(0) && targetField.posX >= 0;
                 bool inBoundsY = targetField.posY < referenceBoard.mBoard.GetLength(1) && targetField.posY >= 0;
                 if (!inBoundsX || !inBoundsY)
-                    return 0;
+                    return new BoardPosition(startPos.posX, startPos.posY, 0);
 
                 //switch case on target field state
                 switch (referenceBoard.mBoard[targetField.posX, targetField.posY])
@@ -151,21 +161,18 @@ namespace Reversi
 
                     //case friendly: stop and calculate score between start and current
                     case (EFieldState.player1):
-
-
-                        //update current to be position of other friendly piece
-                        currentField = targetField;
                         //get amount of fields between startpos and currentpos
                         //to do this, take the target pos, subtract start pos, take the absolute of that value, then subtract 1
                         int differenceX = Math.Abs(targetField.posX - startPos.posX) - 1;
                         int differenceY = Math.Abs(targetField.posY - startPos.posY) - 1;
                         //then return the larger one for x / y. this makes it work for any of the 8 directions
                         //Console.WriteLine("target is player, score is " + Math.Max(differenceX, differenceY));
-                        return Math.Max(differenceX, differenceY);
+                        int score = Math.Max(differenceX, differenceY);
+                        return new BoardPosition(targetField.posX, targetField.posY, score);
 
                     //case empty: cancel and return score 0
                     case (EFieldState.empty):
-                        return 0;
+                        return new BoardPosition(startPos.posX, startPos.posY, 0);
 
                 }
             }
